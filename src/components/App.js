@@ -15,13 +15,13 @@ import NotFound from './NotFound';
 import Featured from './Featured';
 
 const App = () => (
-  <BrowserRouter>
+  <BrowserRouter basename="/course-directory">
     <div className="container">
       <Header />
-      
+
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/about" render={ () => <About title='About' /> } />
+        <Route path="/about" render={() => <About title='About' />} />
         <Route exact path="/teachers" component={Teachers} />
         <Route path="/teachers/:topic/:name" component={Featured} />
         <Route path="/courses" component={Courses} />
